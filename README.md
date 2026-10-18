@@ -7,7 +7,17 @@ Digirota Topluluk'taki paylaşımları tek tıkla kaydet, klasörlere ayır, son
 ## Ne yapar?
 
 - Topluluktaki her paylaşımın altına, **Gönderiyi aç**'ın yanına bir **kaydet** simgesi ekler. Bir tıkla kaydeder, tekrar tıklayınca kayıttan çıkarır.
-- Digirota'nın üst çubuğuna (Duyurular zilinin soluna) bir simge ekler. Bu simge sağdan **Kaydedilenler** panelini açar:
+
+  ![Paylaşımın altındaki kaydet simgesi ve klasör bildirimi](docs/1-kaydet.png)
+
+- Digirota'nın üst çubuğuna (Duyurular zilinin soluna) bir simge ekler:
+
+  ![Üst çubuktaki Kaydedilenler simgesi](docs/2-ust-simge.png)
+
+- Bu simge sağdan **Kaydedilenler** panelini açar:
+
+  ![Kaydedilenler paneli](docs/3-panel.png)
+
   - Kayda tıklayınca paylaşım hemen açılır.
   - Kayıtları **klasörlere** ayırabilirsin (ör. "Şirket kurma"), **not** ekleyebilir, **arama** yapabilirsin.
   - Paylaşımın linkini kopyalayabilirsin.
@@ -56,6 +66,8 @@ Get-FileHash .\digirota-kaydet.zip -Algorithm SHA256
 
 ## Kurulum (Chrome, Edge, Brave, Opera)
 
+![Kurulum adımları](docs/4-kurulum.png)
+
 1. [Sürümler (Releases)](../../releases) sayfasından en son `digirota-kaydet.zip` dosyasını indir ve bir klasöre çıkar.
    Bu klasörü silme veya taşıma; eklenti oradan çalışır.
 2. Adres çubuğuna yaz: `chrome://extensions` (Edge: `edge://extensions`, Brave: `brave://extensions`, Opera: `opera://extensions`).
@@ -89,6 +101,7 @@ Kayıtların silinmez.
 | `panel.js` | Sağdan açılan Kaydedilenler paneli |
 | `content.css` | Simgelerin ve bildirimin görünümü |
 | `background.js` | Araç çubuğundaki eklenti simgesine basınca paneli açar |
+| `docs/` | Bu sayfadaki görseller (eklentinin çalışması için gerekmez) |
 
 ## Lisans
 
