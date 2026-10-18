@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Digirota Kaydet",
+  "version": "2.2.0",
+  "description": "Digirota Topluluk paylaşımlarını kaydet, sonra ara ve tekrar oku.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://app.digirota.com/*"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_title": "Kaydedilenler",
+    "default_icon": { "16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png" }
+  },
+  "icons": { "16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png" },
+  "content_scripts": [
+    {
+      "matches": ["https://app.digirota.com/*"],
+      "js": ["panel.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

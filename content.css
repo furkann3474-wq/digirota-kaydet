@@ -1,0 +1,58 @@
+.dk-wrap { display: inline-flex; align-items: center; gap: 10px; margin-left: auto; }
+.dk-save-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid #e3e6f0;
+  border-radius: 8px;
+  background: #fff;
+  color: #8a8798;
+  cursor: pointer;
+  align-self: center;
+  transition: color .15s, border-color .15s, background .15s;
+}
+.dk-save-btn:hover { color: #7563be; border-color: #e0d6fb; background: #f3efff; }
+.dk-save-btn.is-saved { color: #7563be; border-color: #e0d6fb; --dk-fill: #7563be; }
+
+.dk-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2147483647;
+  background: #1f1b2e;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font: 600 13px/1.4 system-ui, sans-serif;
+  box-shadow: 0 6px 24px rgba(0,0,0,.25);
+}
+.dk-toast.has-folders {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  max-width: min(560px, calc(100vw - 32px));
+  padding: 10px 14px;
+}
+.dk-toast .dk-chip {
+  padding: 4px 10px;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 999px;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.dk-toast .dk-chip:hover { background: rgba(255,255,255,.12); }
+.dk-toast .dk-chip.on { background: #7563be; border-color: #7563be; }
+
+/* Üst çubuktaki Kaydedilenler simgesi */
+.dk-nav-btn svg { display: block; }
+.dk-nav-btn:hover svg { --dk-fill: none; }
+/* Çok dar pencerede site çubuğu zaten sıkışık; simgeyi gizle (panel araç çubuğu simgesiyle açılır) */
+@media (max-width: 420px) { .dk-nav-item { display: none !important; } }
